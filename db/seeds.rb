@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+1000.times do 
+  Tuit.create!(description: Faker::Twitter.status[:text],
+                user_name: Faker::Twitter.status[:user][:name],
+                location: Faker::Twitter.status[:location],
+                friends_count: Faker::Twitter.status[:user][:friends_count],
+                created: Faker::Twitter.status[:created_at],
+                content: Faker::Twitter.status,
+                )
+end
+
+puts "Seed finished"
+puts "#{Tuit.count} tweets created"
