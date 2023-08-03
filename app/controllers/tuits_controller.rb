@@ -2,8 +2,13 @@ class TuitsController < ApplicationController
   before_action :set_tuit, only: %i[ show edit update destroy ]
 
   # GET /tuits or /tuits.json
-  def index    
-    @pagy, @tuits = pagy((Tuit.all), items: 10)    
+  def index
+    if params[:search].present?
+      @pagy, @tuits = pagy(Tuit.where("user_name LIKE ? OR description LIKE ?", "\%#{params[:search]}\%", "\%#{params[:search]}\%"), items: 10)
+    else      
+      @pagy, @tuits = pagy((Tuit.all), items: 10)
+    end    
+    
   end
 
   # GET /tuits/1 or /tuits/1.json
@@ -65,6 +70,6 @@ class TuitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tuit_params
-      params.require(:tuit).permit(:description, :user_name, :location, :friends_count, :created, :content)
+      params.require(:tuit).permit(:description, :user_name, :location, :friends_count, :created, :content, :search)
     end
 end
