@@ -1,32 +1,30 @@
-<div id="<%= dom_id tuit %>">
-  <p>
-    <strong>Description:</strong>
-    <%= tuit.description %>
-  </p>
-
-  <p>
-    <strong>User name:</strong>
-    <%= tuit.user_name %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= tuit.location %>
-  </p>
-
-  <p>
-    <strong>Friends count:</strong>
-    <%= tuit.friends_count %>
-  </p>
-
-  <p>
-    <strong>Created:</strong>
-    <%= tuit.created %>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= tuit.content %>
-  </p>
-
-</div>
+<li class="tweet-card">
+  <div  id="<%= dom_id tuit %>" class="tweet-content">
+    <div class="tweet-header">
+      <span class="fullname">
+        <strong><%= tuit.user_name %></strong>
+      </span>
+      <span class="tweet-time"><%= tuit.created %></span>
+    </div>
+    <a>
+      <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+    </a>
+    <div class="tweet-text">
+      <p class="" lang="es" data-aria-label-part="0"><%= tuit.description %></p>
+    </div>
+    <div class="tweet-footer">
+      <a class="tweet-footer-btn">
+        <i class="fa-regular fa-comment"></i><span>18</span>
+      </a>
+      <a class="tweet-footer-btn">
+        <i class="fa-solid fa-rotate"></i><span>64</span>
+      </a>
+      <a class="tweet-footer-btn">
+        <i class="fa-solid fa-heart"></i><span>202</span>
+      </a>
+      <a class="tweet-footer-btn">
+        <i class="fa-regular fa-envelope"></i><span>155</span>
+      </a>
+    </div>
+  </div>
+</li>

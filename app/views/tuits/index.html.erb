@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Tuits</h1>
-
-<div id="tuits">
-  <% @tuits.each do |tuit| %>
-    <%= render tuit %>
-    <p>
-      <%= link_to "Show this tuit", tuit %>
-    </p>
-  <% end %>
-</div>
-
+<section id="tuits">
+  <div class="container px-4">
+    <div class="row gx-4 justify-content-center">
+      <div class="col-lg-8">        
+        <div class="bg-primary bg-gradient text-white px-2">
+          <h1>Tuits</h1>
+        </div>
+        <div id="tuits" class="col-6">
+          <ol class="tweet-list">
+          <% @tuits.each do |tuit| %>
+            <%= render tuit %>
+            <%= link_to "Show this tuit", tuit, :class=>"btn btn-light" %>            
+          <% end %>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <%= link_to "New tuit", new_tuit_path %>
