@@ -2,8 +2,8 @@ class TuitsController < ApplicationController
   before_action :set_tuit, only: %i[ show edit update destroy ]
 
   # GET /tuits or /tuits.json
-  def index
-    @tuits = Tuit.all
+  def index    
+    @pagy, @tuits = pagy((Tuit.all), items: 10)    
   end
 
   # GET /tuits/1 or /tuits/1.json

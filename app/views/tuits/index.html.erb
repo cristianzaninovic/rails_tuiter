@@ -13,6 +13,7 @@
             <%= link_to "Show this tuit", tuit, :class=>"btn btn-light" %>            
           <% end %>
           </ol>
+          <%= pagy_bootstrap_nav(@pagy).html_safe %>
         </div>
       </div>
     </div>
