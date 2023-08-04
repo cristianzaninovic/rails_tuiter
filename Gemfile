@@ -28,7 +28,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
-gem "cssbundling-rails"
+#gem "cssbundling-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -55,10 +55,9 @@ gem 'bootstrap'
 gem 'jquery-rails'
 
 # Use Sass to process CSS
-gem "sassc-rails"
 
-# Font Awesome Ruby gem
-gem "font-awesome-sass"
+# Font Awesome Ruby gem https://yarnpkg.com/package/font-awesome-sass
+#gem 'font-awesome-sass'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -93,3 +92,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "dartsass-rails", "~> 0.5.0"

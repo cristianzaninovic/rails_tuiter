@@ -9,6 +9,17 @@
     "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
   },
   "browserslist": [
+    "defaults",
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.14",
+    "bootstrap": "^5.3.1",
+    "bootstrap-icons": "^1.10.5",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.64.2"
+  }
 }
