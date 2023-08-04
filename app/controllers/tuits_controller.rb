@@ -6,7 +6,7 @@ class TuitsController < ApplicationController
     if params[:search].present?
       @pagy, @tuits = pagy(Tuit.where("user_name LIKE ? OR description LIKE ?", "\%#{params[:search]}\%", "\%#{params[:search]}\%"), items: 10)
     else      
-      @pagy, @tuits = pagy((Tuit.all), items: 10)
+      @pagy, @tuits = pagy((Tuit.all.order(created: :desc)), items: 10)
     end    
     
   end

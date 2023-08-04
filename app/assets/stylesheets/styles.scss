@@ -40,7 +40,7 @@ section {
 }
 
 .tweet-footer-btn {
-  margin-right: 30px;
+  margin-right: 2px;
 }
 .tweet-footer-btn i, .tweet-footer-btn span {
   color: #657786;
@@ -48,4 +48,31 @@ section {
 }
 .tweet-footer-btn span {
   margin-left: 8px;
+}
+
+.btn-follow {
+  border-color: #1DA1F2;
+  color: #1DA1F2;
+  background-color: #fff;
+  border: 1px solid #1da1f2;
+  display: inline;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  min-width: 89px;
+}
+
+.btn-tuiter {
+  border-radius: 100px;
+  border: 1px solid #1da1f2;
+  color: #fff;
+  background-color: #4AB3F4;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 14px;
 }
