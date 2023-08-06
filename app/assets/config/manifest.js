@@ -5,3 +5,4 @@
 //= link bootstrap.js
 //= link popper.js
 //= link_tree ../builds
+//= link_tree ../fonts
