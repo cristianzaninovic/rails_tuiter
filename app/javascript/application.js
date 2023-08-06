@@ -4,3 +4,4 @@ import "./controllers"
 import "popper"
 import "bootstrap"
 import "jquery"import * as bootstrap from "bootstrap"
+import "bootstrap-icons/font";
